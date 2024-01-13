@@ -1,14 +1,14 @@
 from fastapi import FastAPI, Response, status, HTTPException
 
 # from models.product import Product
-from models.user import User
+# from models.user import User
 
 # from schemas.product import ProductSch
-from schemas.user import UserSch
+# from schemas.user import UserSch
 
 app = FastAPI()
 # connp = Product()
-connu = User()
+# connu = User()
 
 
 @app.get("/")
@@ -39,16 +39,16 @@ async def root():
 #     return items
 
 
-@app.get("/users", status_code=status.HTTP_200_OK)
-def get_users():
-    items = []
-    for data in connu.get_all():
-        dicc = {}
-        dicc["id"] = data[0]
-        dicc["name"] = data[2]
-        dicc["lastname"] = data[3]
-        dicc["email"] = data[4]
-        dicc["password"] = data[5]
-        dicc["active"] = data[6]
-        items.append(dicc)
-    return items
+# @app.get("/users", status_code=status.HTTP_200_OK)
+# def get_users():
+#     items = []
+#     for data in connu.get_all():
+#         dicc = {}
+#         dicc["id"] = data[0]
+#         dicc["name"] = data[2]
+#         dicc["lastname"] = data[3]
+#         dicc["email"] = data[4]
+#         dicc["password"] = data[5]
+#         dicc["active"] = data[6]
+#         items.append(dicc)
+#     return items
